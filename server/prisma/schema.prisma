@@ -24,6 +24,7 @@ model Project{
   id                 String     @id @default(uuid())
   name               String    
   userId             String
+   generatedVideo    String?
   productName        String   @default("")
   productDescription String   @default("")
   userPrompt         String   @default("9:16")
@@ -31,7 +32,7 @@ model Project{
   uploadedImages     String[]
   generatedImage     String   @default("")
   uploadedVideo      String   @default("")
-  isGenerating       String   @default("false")
+  isGenerating       Boolean   @default("false")
   isPublished        String   @default("false")
   error              String   @default("")
 
